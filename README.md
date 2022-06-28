@@ -6,6 +6,7 @@ Might be very useful for business processes logging, data masking and errors tra
 ## Requirements:
 
 	* log to stdout
+	* log to file
 	* log caller information
 	* log business context and system context
 	* log in json format

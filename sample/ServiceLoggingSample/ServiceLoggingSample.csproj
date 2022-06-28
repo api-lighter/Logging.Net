@@ -10,6 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\src\Logging.Net.Serilog\Logging.Net.Console.csproj" />
+    <ProjectReference Include="..\..\src\Logging.Net.File\Logging.Net.File.csproj" />
+    <ProjectReference Include="..\..\src\Logging.Net.Serilog\Logging.Net.Console.csproj" />
   </ItemGroup>
 </Project>

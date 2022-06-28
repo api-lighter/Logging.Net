@@ -9,5 +9,6 @@ namespace Logging.Net.Core
         bool IsLogLevelEnabled(LogLevel logLevel);
         void Log(LogLevel logLevel, string message);
         void Log(LogLevel logLevel, KeyValuePair<string, object>[] data);
+        void WriteToLog(LogLevel logLevel, string message);
     }
 }
