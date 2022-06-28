@@ -16,7 +16,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logging.Net.Core", "src\Logging.Net.Core\Logging.Net.Core.csproj", "{E83435DF-A558-4991-9FE0-E09F82EEBAF7}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logging.Net.Console", "src\Logging.Net.Serilog\Logging.Net.Console.csproj", "{F7A7D394-4611-4C58-A1CA-7CBA3697E040}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logging.Net.Console", "src\Logging.Net.Console\Logging.Net.Console.csproj", "{F7A7D394-4611-4C58-A1CA-7CBA3697E040}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceLoggingSample", "sample\ServiceLoggingSample\ServiceLoggingSample.csproj", "{1F456509-69C0-48CA-AF85-ADCA5234AFDE}"
 EndProject
