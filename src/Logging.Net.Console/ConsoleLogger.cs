@@ -9,7 +9,7 @@ namespace Logging.Net.Console
         {
             if (IsLogLevelEnabled(logLevel))
             {
-                System.Console.WriteLine($"{message.Time.ToString("dd/MM/yyyy HH:mm:ss zzz")} [{logLevel.ToString()}, Request: {message.RequestId}, Operation: {message.OperationName ?? "None"}, User: {message.User ?? "None"}]: {message.MessageText}");
+                System.Console.WriteLine($"{message.Time.ToString("dd/MM/yyyy HH:mm:ss zzz")} [{logLevel.ToString()}, Request: {message.RequestId?.ToString() ?? "None"}, Operation: {message.OperationName ?? "None"}, Caller: {message.OperationOwner ?? "None"}]: {message.MessageText}");
             }
         }
     }

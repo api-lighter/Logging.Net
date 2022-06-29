@@ -17,8 +17,11 @@ namespace ServiceLoggingSample
 
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
+            _logger.Context.BeginContext();
+
             while (!stoppingToken.IsCancellationRequested)
             {
+
                 _logger.Info($"Worker running at: {DateTimeOffset.Now}");
                 await Task.Delay(500, stoppingToken);
             }

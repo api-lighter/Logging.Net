@@ -18,14 +18,14 @@ namespace Logging.Net.Core
             User = null;
         }
 
-        public Message(string messageText, LogLevel level)
+        public Message(LoggerContext context, string messageText, LogLevel level)
         {
             MessageText = messageText;
             Time = DateTime.UtcNow;
-            OperationId = Guid.NewGuid().ToString();
-            RequestId = Guid.NewGuid();
-            OperationName = null;
-            User = null;
+            OperationId = context.OperationId;
+            RequestId = context.RequestId;
+            OperationName = context.OperationName;
+            User = context.User;
             Level = level;
         }
 

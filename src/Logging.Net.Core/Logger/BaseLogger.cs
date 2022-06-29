@@ -34,7 +34,7 @@ namespace Logging.Net.Core.Logger
 
         private void WriteFormatted(LogLevel logLevel, string message)
         {
-            var newMessage = new Message(message.FormatMessage(FormatType.None), logLevel);
+            var newMessage = new Message(Context, message.FormatMessage(FormatType.None), logLevel);
             WriteToLog(logLevel, newMessage);
         }
 
