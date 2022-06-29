@@ -1,6 +1,5 @@
 ﻿using Logging.Net.Core;
 using Logging.Net.Core.Logger;
-using System;
 
 namespace Logging.Net.File
 {
@@ -20,8 +19,6 @@ namespace Logging.Net.File
 
         public override void WriteToLog(LogLevel logLevel, string message)
         {
-            base.WriteToLog(logLevel, message);
-
             if (IsLogLevelEnabled(logLevel))
             {
                 lock (_lock)

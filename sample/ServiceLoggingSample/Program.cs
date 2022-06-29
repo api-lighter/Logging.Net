@@ -1,5 +1,4 @@
 using Logging.Net.Console;
-using Logging.Net.File;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
@@ -16,7 +15,7 @@ namespace ServiceLoggingSample
             Host.CreateDefaultBuilder(args)
                 .ConfigureServices((hostContext, services) =>
                 {
-                    services.AddFileLogging();
+                    services.AddConsoleLogging();
                     services.AddHostedService<Worker>();
                 });
     }

@@ -8,12 +8,15 @@ namespace Logging.Net.Core.Logger
 {
     public class BaseLogger : ILoggerBase
     {
+        private readonly JsonSerializerSettings _jsonSerializerSettings;
         private readonly LoggerContext _context;
 
         public LoggerContext Context => _context;
 
         public BaseLogger()
         {
+            _jsonSerializerSettings = new JsonSerializerSettings();
+            _jsonSerializerSettings.Converters.Add(new Newtonsoft.Json.Converters.StringEnumConverter());
             _context = new LoggerContext();
         }
 
@@ -31,7 +34,8 @@ namespace Logging.Net.Core.Logger
 
         private void WriteFormatted(LogLevel logLevel, string message)
         {
-            WriteToLog(logLevel, message.FormatMessage(FormatType.Date | FormatType.Time));
+            var newMessage = new Message(message.FormatMessage(FormatType.None), logLevel);
+            WriteToLog(logLevel, JsonConvert.SerializeObject(newMessage, _jsonSerializerSettings));
         }
 
         public virtual void WriteToLog(LogLevel logLevel, string message)
