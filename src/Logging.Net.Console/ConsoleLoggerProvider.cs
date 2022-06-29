@@ -1,5 +1,4 @@
 ﻿using Logging.Net.Core;
-using Logging.Net.Serilog;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Logging.Net.Console

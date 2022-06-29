@@ -35,7 +35,12 @@ namespace Logging.Net.Core.Logger
         private void WriteFormatted(LogLevel logLevel, string message)
         {
             var newMessage = new Message(message.FormatMessage(FormatType.None), logLevel);
-            WriteToLog(logLevel, JsonConvert.SerializeObject(newMessage, _jsonSerializerSettings));
+            WriteToLog(logLevel, newMessage);
+        }
+
+        public virtual void WriteToLog(LogLevel logLevel, Message message)
+        {
+            WriteToLog(logLevel, JsonConvert.SerializeObject(message, _jsonSerializerSettings));
         }
 
         public virtual void WriteToLog(LogLevel logLevel, string message)

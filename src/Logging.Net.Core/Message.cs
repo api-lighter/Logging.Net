@@ -3,7 +3,7 @@ using System;
 
 namespace Logging.Net.Core
 {
-    internal class Message : LoggerContext
+    public class Message : LoggerContext
     {
         public LogLevel Level { get; set; }
         public DateTime Time { get; set; }
@@ -14,8 +14,8 @@ namespace Logging.Net.Core
             Time = DateTime.UtcNow;
             OperationId = Guid.NewGuid().ToString();
             RequestId = Guid.NewGuid();
-            OperationName = "";
-            User = "";
+            OperationName = null;
+            User = null;
         }
 
         public Message(string messageText, LogLevel level)
@@ -24,8 +24,8 @@ namespace Logging.Net.Core
             Time = DateTime.UtcNow;
             OperationId = Guid.NewGuid().ToString();
             RequestId = Guid.NewGuid();
-            OperationName = "";
-            User = "";
+            OperationName = null;
+            User = null;
             Level = level;
         }
 
@@ -35,8 +35,8 @@ namespace Logging.Net.Core
             RequestId = requestId;
             Time = DateTime.UtcNow;
             OperationId = Guid.NewGuid().ToString();
-            OperationName = "";
-            User = "";
+            OperationName = null;
+            User = null;
         }
 
         public Message(DateTime time, string messageText)
@@ -45,8 +45,8 @@ namespace Logging.Net.Core
             MessageText = messageText;
             OperationId = Guid.NewGuid().ToString();
             RequestId = Guid.NewGuid();
-            OperationName = "";
-            User = "";
+            OperationName = null;
+            User = null;
         }
     }
 }
