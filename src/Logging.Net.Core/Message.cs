@@ -3,7 +3,7 @@ using System;
 
 namespace Logging.Net.Core
 {
-    public class Message : LoggerContext
+    public class Message : LoggerContextData
     {
         public LogLevel Level { get; set; }
         public DateTime Time { get; set; }
@@ -18,7 +18,7 @@ namespace Logging.Net.Core
             User = null;
         }
 
-        public Message(LoggerContext context, string messageText, LogLevel level)
+        public Message(LoggerContextData context, string messageText, LogLevel level)
         {
             MessageText = messageText;
             Time = DateTime.UtcNow;

@@ -5,7 +5,7 @@ namespace Logging.Net.Core
 {
     public interface ILoggerBase
     {
-        LoggerContext Context { get; }
+        LoggerContextData Context { get; }
         bool IsLogLevelEnabled(LogLevel logLevel);
         void Log(LogLevel logLevel, string message);
         void Log(LogLevel logLevel, KeyValuePair<string, object>[] data);

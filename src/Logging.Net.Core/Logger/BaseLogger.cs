@@ -9,15 +9,15 @@ namespace Logging.Net.Core.Logger
     public class BaseLogger : ILoggerBase
     {
         private readonly JsonSerializerSettings _jsonSerializerSettings;
-        private readonly LoggerContext _context;
+        private readonly LoggerContextData _context;
 
-        public LoggerContext Context => _context;
+        public LoggerContextData Context => _context;
 
         public BaseLogger()
         {
             _jsonSerializerSettings = new JsonSerializerSettings();
             _jsonSerializerSettings.Converters.Add(new Newtonsoft.Json.Converters.StringEnumConverter());
-            _context = new LoggerContext();
+            _context = new LoggerContextData();
         }
 
         public virtual bool IsLogLevelEnabled(LogLevel logLevel) => true;
