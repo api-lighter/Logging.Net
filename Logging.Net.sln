@@ -16,9 +16,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logging.Net.Core", "src\Logging.Net.Core\Logging.Net.Core.csproj", "{E83435DF-A558-4991-9FE0-E09F82EEBAF7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logging.Net.Console", "src\Logging.Net.Serilog\Logging.Net.Console.csproj", "{F7A7D394-4611-4C58-A1CA-7CBA3697E040}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logging.Net.Console", "src\Logging.Net.Console\Logging.Net.Console.csproj", "{F7A7D394-4611-4C58-A1CA-7CBA3697E040}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceLoggingSample", "sample\ServiceLoggingSample\ServiceLoggingSample.csproj", "{1F456509-69C0-48CA-AF85-ADCA5234AFDE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceLoggingSample", "sample\ServiceLoggingSample\ServiceLoggingSample.csproj", "{1F456509-69C0-48CA-AF85-ADCA5234AFDE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logging.Net.File", "src\Logging.Net.File\Logging.Net.File.csproj", "{89B0693E-91C0-48F6-BB7F-0B4B1EB4CB98}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -38,6 +40,10 @@ Global
 		{1F456509-69C0-48CA-AF85-ADCA5234AFDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1F456509-69C0-48CA-AF85-ADCA5234AFDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1F456509-69C0-48CA-AF85-ADCA5234AFDE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89B0693E-91C0-48F6-BB7F-0B4B1EB4CB98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89B0693E-91C0-48F6-BB7F-0B4B1EB4CB98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89B0693E-91C0-48F6-BB7F-0B4B1EB4CB98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89B0693E-91C0-48F6-BB7F-0B4B1EB4CB98}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -46,6 +52,7 @@ Global
 		{E83435DF-A558-4991-9FE0-E09F82EEBAF7} = {F656AC3D-959C-4901-9C87-3D810D9C4C75}
 		{F7A7D394-4611-4C58-A1CA-7CBA3697E040} = {F656AC3D-959C-4901-9C87-3D810D9C4C75}
 		{1F456509-69C0-48CA-AF85-ADCA5234AFDE} = {48BAE288-1DE1-4C1A-BDA4-F8298E3CA94A}
+		{89B0693E-91C0-48F6-BB7F-0B4B1EB4CB98} = {F656AC3D-959C-4901-9C87-3D810D9C4C75}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CC7889D9-FC8C-4A21-B429-97EDFE0E6605}
